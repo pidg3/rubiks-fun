@@ -22,8 +22,9 @@ class RubixCube:
     def __init__(self):
         total_squares = SIDES_OF_CUBE * SQUARES_ON_SIDE
         rand_sequence = random.sample(range(total_squares), total_squares)
-        rand_enum_values = np.array(list(map(lambda value : (value % SIDES_OF_CUBE) + 1, rand_sequence))) # TODO: must be a less crappy way of doing this
-        self.cube = rand_enum_values.reshape(6, 9)
+        convert_to_enum = lambda value : (value % SIDES_OF_CUBE) + 1
+        enum_values = np.array([convert_to_enum(value) for value in rand_sequence])
+        self.cube = enum_values.reshape(6, 9)
 
     # position = top, bottom, left, right
     # direction = up/down/left/right? (needs more thinking)
@@ -32,13 +33,9 @@ class RubixCube:
 
     def get_cube(self):
         flattened_cube = self.cube.flatten()
-        print(flattened_cube)
         get_colour = lambda value : Colour(value).name
         colours = np.array([get_colour(value) for value in flattened_cube])
         return colours.reshape(6, 9)
-
-    # def get_colour(self, value):
-
         
 # Maybe 3D should be worked on first? Otherwise it will be difficult to reason with this when trying different algorithms. 
 
