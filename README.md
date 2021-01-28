@@ -21,4 +21,4 @@ Squares on a side are numbered 1-9, starting from top-left.
 
 This gives us a notation to work with, e.g. `4.6' would be the right-middle square on the right hand side. This mirrors the 2D array structure as it stands. 
 
-Not sure how easy to reason with this will be when start doing transformations...
+Not sure how easy to reason with this will be when start doing transformations.
