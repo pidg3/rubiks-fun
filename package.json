@@ -1,0 +1,27 @@
+{
+  "name": "rubix-fun",
+  "version": "1.0.0",
+  "description": "Rubix cube simulator and solver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pidg3/rubix-fun.git"
+  },
+  "author": "Michael Pidgeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pidg3/rubix-fun/issues"
+  },
+  "homepage": "https://github.com/pidg3/rubix-fun#readme",
+  "dependencies": {
+    "three": "^0.125.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0"
+  }
+}

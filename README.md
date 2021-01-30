@@ -20,5 +20,5 @@ Sides are numbered 1-6. 3 is always the front, other sides as per diagram.
 Squares on a side are numbered 1-9, starting from top-left.
 
 This gives us a notation to work with, e.g. `4.6' would be the right-middle square on the right hand side. This mirrors the 2D array structure as it stands. 
-
+d
 Not sure how easy to reason with this will be when start doing transformations.
