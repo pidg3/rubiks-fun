@@ -22,18 +22,20 @@ This gives us a notation to work with, e.g. `R.6' would be the right-middle squa
 
 ### Ideas about rotations
 
-As per above, each face has nine squares defined, numbered 1-9. Rotations on that face are easy:
-* 1 -> 3
-* 2 -> 6
-* 3 -> 9
-* 4 -> 2
-* 5 -> 5 (no change)
-* 6 -> 8
-* 7 -> 1
-* 8 -> 4
-* 9 -> 7
+As per above, each face has nine squares defined, numbered 0-8. Rotations on that face are easy:
+* 0 -> 2
+* 1 -> 5
+* 2 -> 8
+* 3 -> 1
+* 4 -> 4 (no change)
+* 5 -> 7
+* 6 -> 0
+* 7 -> 3
+* 8 -> 6
 
 It is a bit harder for the rows on the other four sides. I think each face will need to be explicitly linked to the other four faces, and the rows. This will need to be directed (say, CW). 
+
+Keep everything zero-indexed for simplicity. 
 
 For example: the links for F (front) would be:
 ```JS
@@ -41,19 +43,19 @@ For example: the links for F (front) would be:
     // order matters, but the starting point doesn't
     {
         face: 'U', // or some enum representation
-        squares: [7, 8, 9]
+        squares: [6, 7, 8]
     },
     {
         face: 'R',
-        squares: [1, 4, 7]
+        squares: [0, 3, 6]
     },
     {
-        face: 'B',
-        squares: [1, 2, 3] 
+        face: 'D',
+        squares: [0, 1, 2]
     },
     {
         face: 'L',
-        squares: [3, 6, 9]
+        squares: [2, 5, 8]
     },
 
 ]
